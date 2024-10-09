@@ -42,7 +42,7 @@ def mostrar_producto_mayor_15000(inventario):
         if producto[1] > 15000:
             print(
                 f"Producto: {producto[0]}, Precio: {producto[1]}, Cantidad: {producto[2]}"
-            )
+            ) 
 
 
 # funcion de ordenar
@@ -79,15 +79,14 @@ def mostrar_producto_mas_caro_y_barato(inventario):
 
 inventario = []
 # funcion de elegir la opcion
-opcion = 0
-while True:
+opcion = input("Ingrese la opción")
+while opcion==6:
     menu()
-    opcion = input("Ingrese la opcion 1-6:")
     match opcion:
         case "1":
             print("Cargar producto/s")
             # logica para cargar productos
-            cargar_inventario(inventario)
+            inventario=cargar_inventario(inventario)
         case "2":
             print("Buscar producto")
             # Lógica para buscar productos
